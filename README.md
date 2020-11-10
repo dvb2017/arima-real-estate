@@ -1,4 +1,4 @@
-# Predicting Real Estate Prices with ARIMA
+# Predicting Real Estate Prices with SARIMA
 
 
 ## Introduction
