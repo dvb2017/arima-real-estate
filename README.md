@@ -34,6 +34,10 @@ While I used various methods of data visualization before I began modeling, ther
 
 ![one-year](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_red.png) ![one-year-red](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_green.png) ![one-year-zero](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_zero.png)
 
+Next, I wanted to check to see if there was a relationship between the change in housing prices for each state and the population change for that state.  To get a visualization of this, I created a scatter plot with percent change in price on one axis and percent change in the state's population on the other.  I then sized each dot according to that state's share of top 3% of zip codes.  
+
+![price-change-by-state](https://github.com/dvb2017/arima-real-estate/blob/master/charts/share_by_state.png)
+
 ## Modeling
 
 The first step I took here was to find the ARIMA parameters that best fit the remaining data.  In order to find this, I averaged the dataset for each date and ran a grid search model with varying parameters in order to find the lowest AIC value.  The Akaike Information Criterion gives us a score representing the prediction error. It takes into account both underfitting and overfitting so that both can be avoided.  Once I had found the model that best fit the average data, I ran each of the remaining zip codes through the model separately.  Once I had done this and put the information into a dataframe, I was able to rank each one according to its predicted ROI 5 years out.  I took the top 10 values here and tested each of these to make sure they were running at their optimal parameters, much like with the overall dataset.  At this point I was able to calculate the risk adjusted return for each of the top five values and rank them, giving my final result.  
