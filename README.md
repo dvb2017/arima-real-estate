@@ -32,7 +32,7 @@ There were two separate and distinct steps here. The first was to narrow down th
 
 While I used various methods of data visualization before I began modeling, there are a couple that I would like to quickly highlight here.  The first was a visualization I created in order to get a quick idea of what seasonality might be present in the data.  In an effort to easily observe this, I plotted each year's prices as their own line on the graph.  This gave a rather confusing picture until I incorporated some outside knowledge of housing prices.  The next graph shows the years during the financial crisis in red, giving a clearer idea of what is happening.  Finally, in the third graph I started each line at zero so that rather than showing the actual price for each year it simply showcased the change in price during that year.  
 
-![one-year](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_green.png) ![one-year-red](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_red.png) ![one-year-zero](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_zero.png)
+![one-year](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_red.png) ![one-year-red](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_green.png) ![one-year-zero](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_zero.png)
 
 ## Modeling
 
