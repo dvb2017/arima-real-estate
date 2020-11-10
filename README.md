@@ -11,14 +11,14 @@
 
 ## Table of Contents
 
-- presentation.pdf - a pdf file containing the powerpoint slides
-- student.ipynb - Jupyter Notebook containing notated code
-- README.md - this file, serving as a directory
-- zillow_data.csv - the main dataset used here
-- census_1996.csv - another dataset used here
-- census_2018.csv - another dataset used here
-- name_abbr.csv - another dataset used here
-- charts - a folder containing all of the charts generated 
+- `presentation.pdf` - a pdf file containing the powerpoint slides
+- `student.ipynb` - Jupyter Notebook containing notated code
+- `README.md` - this file, serving as a directory
+- `zillow_data.csv` - the main dataset used here
+- `census_1996.csv` - another dataset used here
+- `census_2018.csv` - another dataset used here
+- `name_abbr.csv` - another dataset used here
+- `charts` - a folder containing all of the charts generated 
 
 ## The Dataset
 
