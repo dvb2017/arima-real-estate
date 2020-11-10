@@ -24,11 +24,17 @@
 
 The dataset here is fairly simple.  It includes housing prices for a large number of zip codes in the United States over a period of 22 years.  Along with each entry is the associated city, state, and size ranking.  The only real data of interest for our analysis will be the zip codes and time series housing prices, which is presented originally in wide format.  This just means that all of the date entries are on the same line, making the dataset 'wide'.
 
-## The Cleaning
+## Data Cleaning
 
 There were two separate and distinct steps here. The first was to narrow down the list of zip codes so that the modeling wouldn't be too time intensive.  I chose to do this by calculating the ROI from the beginning to the end of the time series for each zip code.  I then sorted these and selected the top 3% of zip codes to further examine.  These are the regions I would take a closer look at with the modeling as they seem to represent the best investments from a high level perspective.  The second step was to put the data in long form rather than wide form.  What this means is that each time series entry gets its own row.  I also created a dictionary that served as a list of lists with each zip code corresponding to its time series data so that they could be modeled separately.  For the long form data I set the index to correspond with the time series dates.  
 
-## The Modeling
+## Data Visualization
+
+While I used various methods of data visualization before I began modeling, there are a couple that I would like to quickly highlight here.  The first was a visualization I created in order to get a quick idea of what seasonality might be present in the data.  In an effort to easily observe this, I plotted each year's prices as their own line on the graph.  This gave a rather confusing picture until I incorporated some outside knowledge of housing prices.  The next graph shows the years during the financial crisis in red, giving a clearer idea of what is happening.  Finally, in the third graph I started each line at zero so that rather than showing the actual price for each year it simply showcased the change in price during that year.  
+
+![one-year](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_green.png) ![one-year-red](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_red.png) ![one-year-zero](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_zero.png)
+
+## Modeling
 
 The first step I took here was to find the ARIMA parameters that best fit the remaining data.  In order to find this, I averaged the dataset for each date and ran a grid search model with varying parameters in order to find the lowest AIC value.  The Akaike Information Criterion gives us a score representing the prediction error. It takes into account both underfitting and overfitting so that both can be avoided.  Once I had found the model that best fit the average data, I ran each of the remaining zip codes through the model separately.  Once I had done this and put the information into a dataframe, I was able to rank each one according to its predicted ROI 5 years out.  I took the top 10 values here and tested each of these to make sure they were running at their optimal parameters, much like with the overall dataset.  At this point I was able to calculate the risk adjusted return for each of the top five values and rank them, giving my final result.  
 
