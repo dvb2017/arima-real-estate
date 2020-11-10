@@ -1,4 +1,4 @@
-# Module 4 Final Project
+# Predicting Housing Prices with ARIMA
 
 
 ## Introduction
