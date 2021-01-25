@@ -34,6 +34,10 @@ While I used various methods of data visualization before I began modeling, ther
 
 ![one-year](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_red.png) ![one-year-red](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_green.png) ![one-year-zero](https://github.com/dvb2017/arima-real-estate/blob/master/charts/one_year_zero.png)
 
+I also created a visualization showing the difference between the top three percent subset of zip codes that I selected compared to the greater data set.  There are actually a few interesting insights that can be gleaned from this.  The thick red line on the graph below represents the price of the top three percent zip codes, while the green line represents the overall average price.  The smaller blue lines each represent a random zip code chosen from the top three percent subset.  Obviously, the top three percent subset maintains a much higher price since that was the basis on which it was selected.  The more important observation to be found here is that the price swings are much larger for this category, sugg
+
+![time_sreies](https://github.com/dvb2017/sarima-real-estate/blob/master/charts/time_series.png)
+
 Next, I wanted to check to see if there was a relationship between the change in housing prices for each state and the population change for that state.  To get a visualization of this, I created a scatter plot with percent change in price on one axis and percent change in the state's population on the other.  I then sized each dot according to that state's share of top 3% of zip codes.  
 
 ![price-change-by-state](https://github.com/dvb2017/arima-real-estate/blob/master/charts/share_by_state.png)
